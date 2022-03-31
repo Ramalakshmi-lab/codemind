@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,r,s=0;
+    cin>>n;
+    int t=n;
+    int n1=n*n;
+    while(n1>0)
+    {
+      r=n1%10;
+      s=s+(r);
+      n1=n1/10;
+    }
+    if(t==s)
+    {
+        cout<<"Neon Number";
+    }
+    else
+    {
+       cout<<"Not Neon Number";
+    }
+    
+}
