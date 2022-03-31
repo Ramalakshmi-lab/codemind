@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+void fib(int n)
+{
+    if(n<=0)
+    {
+    cout<<n;
+    }
+    int f=0,s=1;
+    int l=f+s;
+    while(l<=n)
+    {
+        f=s;
+        s=l;
+        l=f+s;
+    }
+    
+    int a=(abs(l-n)>abs(s-n)?s:l);
+    //cout<<a;
+    if(abs(l-n)==abs(s-n))
+    cout<<s<<" "<<l;
+    else cout<<a;
+    
+}
+int main()
+{
+    int n;
+    cin>>n;
+    fib(n);
+    return 0;
+}
