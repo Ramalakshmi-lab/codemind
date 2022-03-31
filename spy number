@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,r,sn=0,pn=1;
+    cin>>n;
+    while(n>0)
+    {
+        r=n%10;
+        sn=sn+r;
+        pn=pn*r;
+        n=n/10;
+    }
+    if(sn==pn)
+    {
+        cout<<"Spy Number";
+    }
+    else
+    {
+        cout<<"Not Spy Number";
+    }
+}
