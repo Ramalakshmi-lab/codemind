@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+void dig(int n)
+{
+    int l=0,r;
+    while(n>0)
+    {
+        r=n%10;
+        l=max(r,l);
+        n=n/10;
+    }
+    cout<<l;
+}
+int main()
+{
+    int n;
+    cin>>n;
+    dig(n);
+    return 0;
+}
