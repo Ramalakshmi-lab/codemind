@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+int rev(int n)
+{
+    int re=0,r;
+    while(n>0)
+    {
+        r=n%10;
+        re=re*10+r;
+        n=n/10;
+    }
+    return re;
+}
+int main()
+{
+    int n,s;
+    cin>>n;
+    s=n*n;
+    int r1=rev(n);
+    int s2=r1*r1;
+    int r2=rev(s2);
+    if(r2==s)
+    cout<<"True";
+    else
+    cout<<"False";
+}
