@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,i,max=0;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    int b,c,s=0;
+    cin>>b>>c;
+    for(int i=0;i<n;i++)
+    {
+        if(a[i]<b or a[i]>c)
+        {
+            if(max<a[i])
+            {
+                max=a[i];
+                s++;
+            }
+    }
+    }
+    if(s==0)
+    {
+cout<<"-1";
+}
+else{
+    cout<<max;
+}
+}
