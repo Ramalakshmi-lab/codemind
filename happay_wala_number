@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+int sum(int m)
+{
+	int r,s=0;
+	while(m>0)
+	{
+	r=m%10;
+	 s=s+(r*r);
+	m=m/10;
+}
+if(s<=9)
+return s;
+else
+return sum(s);
+}
+int main()
+{
+	int n;
+	cin>>n;
+	int p=sum(n);
+	if(p==1 or p==7)
+		cout<<"happy";
+	else
+		cout<<"not happy";
+}
