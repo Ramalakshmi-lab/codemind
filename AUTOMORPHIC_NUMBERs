@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    int d=(int)log10(n)+1;
+    int k=n*n;
+    int p=k%(int)pow(10,d);
+    if(p==n)
+    cout<<"Automorphic Number";
+    else
+    cout<<"Not an Automorphic Number";
+    }
