@@ -1,0 +1,36 @@
+ #include<bits/stdc++.h>
+using namespace std;
+int dig(int m)
+{
+    int p;
+    if(m==0)
+    return 1;
+    p=log10(m)+1;
+    return p;
+}
+int main()
+{
+    int n,i,c=0;
+    cin>>n;
+    int a[n];
+    int b[n];
+    for(i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    int min=dig(abs(a[0]));
+    for(i=0;i<n;i++)
+        {
+            b[i]=dig(abs(a[i]));
+            if(min>dig(abs(a[i])))
+            {
+                min=dig(abs(a[i]));
+            }
+        }
+    for(i=0;i<n;i++)
+    {
+        if(b[i]==min)
+        c+=1;
+    }
+    cout<<c;
+}
