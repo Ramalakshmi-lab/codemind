@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+bool palin(int m)
+{
+    int r,s=0;
+    int t=m;
+    while(m>0)
+    {
+        r=m%10;
+        s=s*10+r;
+        m=m/10;
+    }
+    if(s==t)
+    return true;
+    else 
+    return false;
+}
+int main()
+{
+    int n;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    int p=0;
+    for(int i=0;i<n;i++)
+    {
+        if(palin(a[i])==true)
+        {
+            p++;
+        }
+    }
+    cout<<p;
+}
