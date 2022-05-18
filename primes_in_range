@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+int prime(int m)
+{
+    int c=1;
+    for(int i=2;i*i<=m;i++)
+    {
+        if(m%i==0)
+        {
+            c=0;
+        }
+    }
+    if(c==1)
+    return true;
+    else
+    return false;
+}
+int main()
+{
+    int n,l;
+    cin>>n>>l;
+    int s=0;
+    if(n==1)
+    n=n+1;
+    for(int i=n;i<=l;i++)
+    {
+        if(prime(i)==true)
+        {
+            s++;
+        }
+    }
+    cout<<s;
+    
+}
