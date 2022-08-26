@@ -1,0 +1,11 @@
+a,b=map(int,input().split())
+l=list(map(int,input().split()))
+m=list(map(int,input().split()))
+d=[]
+for i in range(len(l)):
+    if l[i] not in m :
+        d.append(l[i])
+for i in range(len(m)):
+    if m[i] not in l :
+        d.append(m[i])       
+print(*d)
