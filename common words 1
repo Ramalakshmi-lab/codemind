@@ -1,0 +1,11 @@
+a=input()
+b=input()
+a=a.lower()
+b=b.lower()
+d=a.split()
+e=b.split()
+c=0
+for i in d:
+    if i in e:
+        c+=1
+print(c)
