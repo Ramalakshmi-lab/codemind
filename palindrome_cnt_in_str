@@ -1,0 +1,12 @@
+n=input()
+n=n.lower()
+l=n.split()
+a=[]
+c=0
+for i in l:
+    i=i[::-1]
+    a.append(i)
+for i in l:
+    if i in a:
+        c+=1
+print(c)
